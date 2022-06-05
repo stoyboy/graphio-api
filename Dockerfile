@@ -1,7 +1,8 @@
-FROM openjdk:17-alpine as builder
+FROM openjdk:17 as builder
 WORKDIR /graphio-api
 COPY . .
-RUN sudo ./mvnw package
+RUN ls -la ./mvnw
+RUN ./mvnw package
 
 FROM openjdk:17 as runner
 WORKDIR /graphio-api
