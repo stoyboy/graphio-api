@@ -1,4 +1,4 @@
-FROM openjdk:17 as builder
+FROM openjdk:17-alpine as builder
 WORKDIR /graphio-api
 COPY . .
 RUN ./mvnw package
