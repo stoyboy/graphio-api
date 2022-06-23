@@ -23,6 +23,7 @@ public class MatrixHandler {
     @PostMapping("/calculate")
     public HashMap<String, Object> matrix(@RequestParam("file") MultipartFile file,
                                           RedirectAttributes redirectAttributes) {
+        //demo
         try {
             System.out.println(file.getContentType());
             if (file.getContentType().equals("text/csv") || file.getContentType().equals("application/vnd.ms-excel")) {
